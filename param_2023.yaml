@@ -1,0 +1,54 @@
+dataset_dir: ./data/train
+test_dir: ./data/test
+pre_data_dir: ./data/pre
+
+model_dir: ./models
+
+result_dir: ./results
+result_file: result.csv
+
+# Model version
+# ResNext50_32x4d, ConvNeXt_Base, AudioMAE
+version: ConvNeXt_Base
+class_info_file: ./class_info.csv
+nclass: 186
+
+sample_rate: 16000
+n_fft: 400
+win_length: 400
+hop_length: 160
+n_mels: 128
+power: 2.0
+frames: 1024
+
+batch_size: 16
+epochs: 100
+test_epochs: 2
+lr: 1e-3
+num_workers: 4
+
+machines:
+  # Development
+  - ToyCar
+  - ToyTrain
+  - fan
+  - gearbox
+  - bearing
+  - slider
+  - valve
+  # Evaluation
+  - Vacuum
+  - ToyTank
+  - ToyNscale
+  - ToyDrone
+  - bandsaw
+  - grinder
+  - shaker
+
+device_ids:
+#  - 0
+#  - 1
+  - 2
+#  - 3
+
+max_fpr: 0.1

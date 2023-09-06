@@ -1,0 +1,5 @@
+- Training continuation
+- Multi-GPU
+- Mix-up / Remix / SpecMix
+- Balanced BCE (from LiVT)
+- UniAD model
